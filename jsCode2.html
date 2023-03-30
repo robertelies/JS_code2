@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button id = "button1" onclick="myFunction1()">CLICK ME</button>
+<p id="printButton1"></p>
+<button id = "button2" onmouseover="myFunction2()">HOVER ME</button>
+<p id="printButton2"></p>
+<button id = "button3" onmousedown="myFunction3()">MOUSE DOWN</button>
+<p id="printButton3"></p>
+<button id = "button4" onmouseup="myFunction4()">MOUSE UP</button>
+<p id="printButton4"></p>
+<button id = "button5" ondblclick="myFunction5()">DOUBLE CLICK</button>
+<p id="printButton5"></p>
+<button id = "button6" onclick="myFunction6()">SHOW IMAGE</button>
+<button id = "button7" onclick="myFunction7()">HIDE IMAGE</button>
+<img src="image.png" id="div" width="304" height="228" hidden="hidden">
+
+<script>
+function myFunction1() {
+	document.body.style.backgroundColor = "red";
+	document.getElementById("printButton1").innerHTML = ("You did a mouseclick");
+}
+function myFunction2() {
+	document.body.style.backgroundColor = "blue";
+	document.getElementById("printButton2").innerHTML = ("You did a mousehover");
+}
+function myFunction3() {
+	document.body.style.backgroundColor = "purple";
+	document.getElementById("printButton3").innerHTML = ("You did a mouse down");
+}
+function myFunction4() {
+	document.body.style.backgroundColor = "maroon";
+	document.getElementById("printButton4").innerHTML = ("You did a mouse up");
+}
+function myFunction5() {
+	document.body.style.backgroundColor = "green";
+	document.getElementById("printButton4").innerHTML = "You did a double-click";
+}
+let element = document.getElementById("div");
+function myFunction6() {
+	element.removeAttribute("hidden");
+}
+function myFunction7() {
+	element.setAttribute("hidden", "hidden"); 
+}
+</script>
+</body>
+</html>
